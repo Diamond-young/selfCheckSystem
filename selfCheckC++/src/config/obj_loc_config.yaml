@@ -1,0 +1,80 @@
+%YAML:1.0
+
+# 每得到N次视觉定位成功的结果，进行一次人工对比判读，数据的正确性。调试用。
+DEBUG_JUDGE: 100
+
+# 高度到达这么多才开始进行目标定位的计算 int
+height_threshold: 0
+
+# save_video_flag: 1 存图像   save_video_flag: 0   不存图像
+save_video_flag: 1
+
+# 0--zmq 1--config
+camera_param_source: 1
+
+debug_log_file_path: ./obj_trans_log/
+
+#基础高度
+basic_height: 0
+
+# 接收奇维发来的目标检测结果
+zmq_addr_recv_det_res: tcp://192.168.100.101:18866
+# zmq_addr_recv_det_res: "ipc:///tmp/target_geo"
+
+# 向 server 发出请求
+zmq_addr_send_obj_loc_req: ipc:///tmp/dmatch_target
+
+# 给奇维返回目标定位结果
+zmq_addr_send_loc_res: ipc:///tmp/target_res
+
+#接收交互发过来的机体定位结果
+zmq_addr_recv_plane_res: tcp://192.168.100.9:18888
+
+
+## 下面是为目标检测新增的配置参数
+
+# 相邻两次计算间，间隔多少ms
+time_for_sleep_per_cal_ms: 1000
+
+# 目标粗略位置
+Target.lng: 0.0
+Target.lat: 0.0
+
+camera_device: /dev/video11
+
+# 目标定位交互，发给主程序的请求中的相机参数，是目标定位交互从配置文件读的
+camera_param_fx: 1968.2
+camera_param_fy: 1968.9
+camera_param_cx: 478.8
+camera_param_cy: 319.1
+camera_param_k1: 0.0040
+camera_param_k2: -0.0054
+camera_param_p1: 0.0020
+camera_param_p2: -0.0054
+
+
+std:
+  # 相机地理坐标std
+  Camera.lng: 100.0
+  Camera.lat: 100.0
+  Camera.h: 100.0
+  # 相机姿态std
+  Camera.x: 2.0
+  Camera.y: 2.0
+  Camera.z: 5.0
+  # 目标粗略位置std，设置成-1时，认为目标粗略位置不知道
+  target.lng: -1.0
+  target.lat: -1.0
+# 投影方式：0-卫星投影到航拍，1-航拍投影到卫星
+mode: 1
+
+# method 匹配时用的形变模型，0-相似变化，1-仿射变化，2-单应变换，3-姿态辅助pnp，4-pnp
+method: 0
+
+# 可指定对哪些目标进行定位 
+# string 类型，如设置为 "0,1,2,3" 表示返回给外部的目标类型只保留 0、1、2、3 四个类别的
+
+# qw 普通的目标检测模型：
+#  NULL-0   pedestrian-1  people-2  car-3  van-4   truck-5   bus-6
+# 取值范围：0-255
+obj_loc_cls_filter: 0,1,2,4,5,3,12,67

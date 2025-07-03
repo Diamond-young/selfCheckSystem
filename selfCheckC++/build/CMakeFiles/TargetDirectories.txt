@@ -1,0 +1,7 @@
+/home/firefly/selfCheck/build/CMakeFiles/install/strip.dir
+/home/firefly/selfCheck/build/CMakeFiles/install/local.dir
+/home/firefly/selfCheck/build/CMakeFiles/install.dir
+/home/firefly/selfCheck/build/CMakeFiles/list_install_components.dir
+/home/firefly/selfCheck/build/CMakeFiles/rebuild_cache.dir
+/home/firefly/selfCheck/build/CMakeFiles/edit_cache.dir
+/home/firefly/selfCheck/build/CMakeFiles/system_check_server.dir

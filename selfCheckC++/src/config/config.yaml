@@ -1,0 +1,117 @@
+%YAML:1.0
+
+# qw吊舱下视
+# camera:
+  # fx: 642.6731
+  # fy: 643.1798
+  # ux: 495.4012
+  # uy: 276.0815
+  # k1: -0.4714
+  # k2: 0.2488
+  # p1: -6.7280e-04
+  # p2: 6.1171e-04
+#mianyan_d3
+# camera:
+#   fx: 536.0503
+#   fy: 535.9078
+#   ux: 468.2567
+#   uy: 302.0910
+#   k1: -0.0815
+#   k2: 0.0775
+#   p1: -3.4833e-04
+#   p2: -2.7932e-04
+#krl_d8
+camera:
+   fx: 539.0016
+   fy: 538.8799
+   ux: 495.8614
+   uy: 290.6685
+   k1: -0.0727
+   k2: 0.0562
+   p1: -5.5221e-04
+   p2: -0.0011
+
+
+vo:
+  vo_match_model_file1: "/usr/local/sp.rknn"
+  vo_match_model_file2: "/usr/local/sp.onnx"
+  grid_size: 24
+  min_init_point_num: 100
+
+  kpt_type: 1
+  use_R_from_E: 0
+  parallax_threshold: 3.0
+  reprojection_threshold: 4
+  match_method: 4
+  zmq_show_map_address: "tcp://*:1111"
+  use_plane_mode: 0
+  max_optical_flow_distance: 40
+  min_required_tracked_mpt_num: 30
+  max_mpt_num: 1000
+
+
+# current unused
+debug_dir: "../../debug_log/plane"
+# 离线测试 - 轨迹显示程序运行主机地址
+show_state_publish_address: "tcp://*:8848"
+# img_sensor_address: "tcp://192.168.8.55:8846"
+# zmq_external_pose_address: "tcp://192.168.8.55:8850"
+
+# 实飞
+# show_state_publish_address: "ipc:///tmp/show_locate_state"
+img_sensor_address: "ipc:///tmp/sensor_image"
+zmq_external_pose_address: "ipc:///tmp/external_pose"
+
+
+std:
+  vo_x: 100
+  vo_y: 100
+  vo_z: 100
+  vo_rx: 2.0
+  vo_ry: 2.0
+  vo_rz: 10.0
+  external_x: 100
+  external_y: 100
+  external_z: 100
+  external_rx: 1.9
+  external_ry: 1.9
+  external_rz: 10.0
+  speed_x: 200
+  speed_y: 200
+  speed_z: 200
+  speed_rx: 3.0
+  speed_ry: 3.0
+  speed_rz: 3.0
+
+
+min_required_success_register_kf_for_align: 2
+max_trajectory_align_pt_num: 5
+vo_std_increase_ratio: 0.05
+threshold_accept_successful_match: 10
+threshold_angle_to_giveup_match: 25
+threshold_init_angle_to_giveup_match: 50
+threshold_stable_angle_duration: 0.5
+# 机体的最大速度，用于轨迹平滑（m/s）
+max_speed: 100
+
+image_delay_time: 0.0
+threshold_gps_vis_distance: 100
+
+threshold_no_gps_match: 20
+
+threshold_gps_speed: 50
+threshold_correct_time: 0
+
+
+dmatch_method: 3
+dmatch_padding_scale: 1.0
+dmatcher_address: "ipc:///tmp/dmatch_plane"
+
+# warn
+log_code: "70b02a7af8943c4ec6ae4012e4cc6b333033b4c03f5a68cb34caaa9939d39225"
+# 不使用
+fence_code: "867a35978e3b8eb4666634f1abf28cb131438ad217044e19af9385b36f34ec87"
+
+
+threshold_gps_inlier_scale: 0.7
+PK_round_num: 5

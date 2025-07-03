@@ -1,0 +1,48 @@
+%YAML:1.0
+
+
+
+DMatcher:
+  # 实飞
+  sat_map: "/data/tnav/dmatch_v9/map/XJ_sat_L18_cut/"
+  # evelation_map: "../../map/elevation/"
+  # dfeature_database_path: "/media/firefly/WD_BLACK2/GIS/xian_l18_localFeature_rk3588/"
+  #0--Xfeat 1--sp
+  dfeature_type: 1
+  dfeature_model_path:
+    N: 2
+    path_00: "/usr/local/sp.rknn"
+    path_01: "/usr/local/sp.onnx"
+
+  debug_dir: "../../debug_log/plane/image/"
+  zmq_image_match_address: "ipc:///tmp/image_match"
+  zmq_image_feature_address: "ipc:///tmp/dmatch_feature"
+  debug_show: 1
+  ransac_threshold: 20
+
+  threshold_ratio_for_search: 2.5
+
+  search_top_n: 10
+  #  # 模型的地址（当屏蔽该参数，默认设置为/usr/local/ematch.rknn）
+  # model: "/usr/local/ematch.rknn"
+  # model:
+  # 0 --- npu; 1 --- gpu
+  device: 0
+  MatchQuality:
+    MaxPointNum: 30
+    DistributionRatioThreshold: 8
+    prior_pose_scale: 3.0
+    ignore_pose_std_threshold: 100
+    second_M_scale: 2.0
+    second_std_scale: 0.5
+    second_match_std_rx: 1.0
+    second_match_std_ry: 1.0
+    second_match_std_rz: 1.0
+
+dmatcher_server_address: "ipc:///tmp/dmatch_plane"
+
+
+# warn
+log_code: "70b02a7af8943c4ec6ae4012e4cc6b333033b4c03f5a68cb34caaa9939d39225"
+# 不使用
+fence_code: "867a35978e3b8eb4666634f1abf28cb131438ad217044e19af9385b36f34ec87"
