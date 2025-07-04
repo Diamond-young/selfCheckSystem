@@ -47,7 +47,13 @@
       <h2 class="section-title">飞行器定位配置</h2>
       
       <div class="config-group">
+        <div class="group-header">
         <h3 class="group-title">相机参数</h3>
+        <button @click="saveAll" class="group-save-btn">
+          <i class="sas fa-save"></i> 保存本组
+        </button>
+      </div>
+
         
         <ConfigItem 
           label="焦距 X (fx)" 
@@ -123,7 +129,12 @@
       </div>
       
       <div class="config-group">
-        <h3 class="group-title">视觉里程计 (VO)</h3>
+        <div class="group-header">
+            <h3 class="group-title">视觉里程计 (VO)</h3>
+            <button @click="saveAll" class="group-save-btn">
+              <i class="fas fa-save"></i> 保存本组
+            </button>
+          </div>
         
         <ConfigItem 
           label="匹配模型文件 1" 
@@ -256,7 +267,12 @@
       </div>
       
       <div class="config-group">
+        <div class="group-header">
         <h3 class="group-title">网络设置</h3>
+        <button @click="saveAll" class="group-save-btn">
+          <i class="fas fa-save"></i> 保存本组
+        </button>
+        </div>
         
         <ConfigItem 
           label="调试目录" 
@@ -288,7 +304,12 @@
       </div>
       
       <div class="config-group">
+        <div class="group-header">
         <h3 class="group-title">标准差设置</h3>
+        <button @click="saveAll" class="group-save-btn">
+          <i class="fas fa-save"></i> 保存本组
+        </button>
+        </div>
         
         <ConfigItem 
           label="VO X" 
@@ -445,7 +466,12 @@
       </div>
       
       <div class="config-group">
+        <div class="group-header">
         <h3 class="group-title">高级设置</h3>
+        <button @click="saveAll" class="group-save-btn">
+          <i class="fas fa-save"></i> 保存本组
+        </button>
+        </div>
         
         <ConfigItem 
           label="最小注册关键帧数" 
@@ -623,7 +649,12 @@
       </div>
       
       <div class="config-group">
+        <div class="group-header">
         <h3 class="group-title">图像存储设置</h3>
+        <button @click="saveAll" class="group-save-btn">
+          <i class="fas fa-save"></i> 保存本组
+        </button>
+        </div>
         
         <ConfigItem 
           label="存储图像数据" 
@@ -639,7 +670,12 @@
       </div>
       
       <div class="config-group">
+        <div class="group-header">
         <h3 class="group-title">拒止策略设置</h3>
+        <button @click="saveAll" class="group-save-btn">
+          <i class="fas fa-save"></i> 保存本组
+        </button>
+        </div>
         
         <ConfigItem 
           label="拒止策略" 
@@ -681,7 +717,12 @@
       </div>
       
       <div class="config-group">
+        <div class="group-header">
         <h3 class="group-title">数据获取设置</h3>
+        <button @click="saveAll" class="group-save-btn">
+          <i class="fas fa-save"></i> 保存本组
+        </button>
+        </div>
         
         <ConfigItem 
           label="图像来源" 
@@ -710,7 +751,12 @@
       </div>
       
       <div class="config-group">
+        <div class="group-header">
         <h3 class="group-title">导航设置</h3>
+        <button @click="saveAll" class="group-save-btn">
+          <i class="fas fa-save"></i> 保存本组
+        </button>
+        </div>
         
         <ConfigItem 
           label="高精度惯导可用" 
@@ -764,7 +810,12 @@
       </div>
       
       <div class="config-group">
+        <div class="group-header">
         <h3 class="group-title">时间补偿设置</h3>
+        <button @click="saveAll" class="group-save-btn">
+          <i class="fas fa-save"></i> 保存本组
+        </button>
+        </div>
         
         <ConfigItem 
           label="图像采集延时补偿 (毫秒)" 
@@ -777,7 +828,12 @@
       </div>
       
       <div class="config-group">
+        <div class="group-header">
         <h3 class="group-title">惯导设置</h3>
+        <button @click="saveAll" class="group-save-btn">
+          <i class="fas fa-save"></i> 保存本组
+        </button>
+        </div>
         
         <ConfigItem 
           label="惯导比例系数" 
@@ -812,8 +868,11 @@
       
       <div class="field-warning">
         <i class="fas fa-info-circle"></i> 以下为通常不需要修改的配置项
+        <button @click="saveAll" class="group-save-btn">
+          <i class="fas fa-save"></i> 保存修改
+        </button>
       </div>
-      
+     
       <!-- 其余配置项 -->
       <div class="config-group">
         <h3 class="group-title">基础设置</h3>
@@ -1015,7 +1074,12 @@
       <h2 class="section-title">DMatcher 配置</h2>
       
       <div class="config-group">
-        <h3 class="group-title">路径设置</h3>
+        <div class="group-header">
+            <h3 class="group-title">路径设置</h3>
+            <button @click="saveAll" class="group-save-btn">
+              <i class="fas fa-save"></i> 保存本组
+            </button>
+          </div>
         
         <!-- 修复点1：修正v-model绑定 -->
         <ConfigItem 
@@ -1049,7 +1113,12 @@
       </div>
       
       <div class="config-group">
-        <h3 class="group-title">特征设置</h3>
+        <div class="group-header">
+            <h3 class="group-title">特征设置</h3>
+            <button @click="saveAll" class="group-save-btn">
+              <i class="fas fa-save"></i> 保存本组
+            </button>
+          </div>
         
         <ConfigItem 
           label="特征类型" 
@@ -1065,7 +1134,12 @@
       </div>
       
       <div class="config-group">
-        <h3 class="group-title">模型设置</h3>
+        <div class="group-header">
+            <h3 class="group-title">模型设置</h3>
+            <button @click="saveAll" class="group-save-btn">
+              <i class="fas fa-save"></i> 保存本组
+            </button>
+          </div>
         
         <!-- 修复点3：修正路径名 -->
         <ConfigItem 
@@ -1092,7 +1166,12 @@
       </div>
       
       <div class="config-group">
-        <h3 class="group-title">调试设置</h3>
+        <div class="group-header">
+            <h3 class="group-title">调试设置</h3>
+            <button @click="saveAll" class="group-save-btn">
+              <i class="fas fa-save"></i> 保存本组
+            </button>
+          </div>
         
         <ConfigItem 
           label="调试显示" 
@@ -1143,7 +1222,12 @@
       </div>
       
       <div class="config-group">
-        <h3 class="group-title">匹配质量设置</h3>
+        <div class="group-header">
+            <h3 class="group-title">匹配质量设置</h3>
+            <button @click="saveAll" class="group-save-btn">
+              <i class="fas fa-save"></i> 保存本组
+            </button>
+          </div>
         
         <ConfigItem 
           label="最大点数" 
@@ -1226,7 +1310,12 @@
       </div>
       
       <div class="config-section">
-        <h2 class="section-title">服务器设置</h2>
+        <div class="group-header">
+            <h3 class="group-title">服务器设置</h3>
+            <button @click="saveAll" class="group-save-btn">
+              <i class="fas fa-save"></i> 保存本组
+            </button>
+          </div>
         
         <ConfigItem 
           label="服务器地址" 
@@ -1237,7 +1326,12 @@
       </div>
       
       <div class="config-section">
-        <h2 class="section-title">安全设置</h2>
+        <div class="group-header">
+            <h3 class="group-title">安全设置</h3>
+            <button @click="saveAll" class="group-save-btn">
+              <i class="fas fa-save"></i> 保存本组
+            </button>
+          </div>
         
         <ConfigItem 
           label="日志代码" 
@@ -1262,7 +1356,12 @@
       <h2 class="section-title">DMatcher 配置 (目标定位)</h2>
       
       <div class="config-group">
-        <h3 class="group-title">路径设置</h3>
+        <div class="group-header">
+            <h3 class="group-title">路径设置</h3>
+            <button @click="saveAll" class="group-save-btn">
+              <i class="fas fa-save"></i> 保存本组
+            </button>
+          </div>
         
         <ConfigItem 
           label="卫星地图路径" 
@@ -1294,7 +1393,12 @@
       </div>
       
       <div class="config-group">
-        <h3 class="group-title">特征设置</h3>
+        <div class="group-header">
+            <h3 class="group-title">特征设置</h3>
+            <button @click="saveAll" class="group-save-btn">
+              <i class="fas fa-save"></i> 保存本组
+            </button>
+          </div>
         
         <ConfigItem 
           label="特征类型" 
@@ -1310,7 +1414,12 @@
       </div>
       
       <div class="config-group">
-        <h3 class="group-title">模型设置</h3>
+        <div class="group-header">
+            <h3 class="group-title">模型设置</h3>
+            <button @click="saveAll" class="group-save-btn">
+              <i class="fas fa-save"></i> 保存本组
+            </button>
+          </div>
         
         <ConfigItem 
           label="模型数量 (N)" 
@@ -1336,7 +1445,12 @@
       </div>
       
       <div class="config-group">
-        <h3 class="group-title">调试设置</h3>
+        <div class="group-header">
+            <h3 class="group-title">调试设置</h3>
+            <button @click="saveAll" class="group-save-btn">
+              <i class="fas fa-save"></i> 保存本组
+            </button>
+          </div>
         
         <ConfigItem 
           label="调试显示" 
@@ -1386,7 +1500,12 @@
       </div>
       
       <div class="config-group">
-        <h3 class="group-title">匹配质量设置</h3>
+        <div class="group-header">
+            <h3 class="group-title">匹配质量设置</h3>
+            <button @click="saveAll" class="group-save-btn">
+              <i class="fas fa-save"></i> 保存本组
+            </button>
+          </div>
         
         <ConfigItem 
           label="最大点数" 
@@ -1468,7 +1587,12 @@
       </div>
       
       <div class="config-section">
-        <h2 class="section-title">服务器设置</h2>
+        <div class="group-header">
+            <h3 class="group-title">服务器设置</h3>
+            <button @click="saveAll" class="group-save-btn">
+              <i class="fas fa-save"></i> 保存本组
+            </button>
+          </div>
         
         <ConfigItem 
           label="服务器地址" 
@@ -1479,7 +1603,12 @@
       </div>
       
       <div class="config-section">
-        <h2 class="section-title">安全设置</h2>
+        <div class="group-header">
+            <h3 class="group-title">安全设置</h3>
+            <button @click="saveAll" class="group-save-btn">
+              <i class="fas fa-save"></i> 保存本组
+            </button>
+          </div>
         
         <ConfigItem 
           label="日志代码" 
@@ -1510,7 +1639,12 @@
       </div>
       
       <div class="config-group">
-        <h3 class="group-title">基本设置</h3>
+        <div class="group-header">
+            <h3 class="group-title">基本设置</h3>
+            <button @click="saveAll" class="group-save-btn">
+              <i class="fas fa-save"></i> 保存本组
+            </button>
+          </div>
         
         <ConfigItem 
           label="调试判读频率" 
@@ -1569,7 +1703,12 @@
       </div>
       
       <div class="config-group">
-        <h3 class="group-title">网络设置</h3>
+        <div class="group-header">
+            <h3 class="group-title">网络设置</h3>
+            <button @click="saveAll" class="group-save-btn">
+              <i class="fas fa-save"></i> 保存本组
+            </button>
+          </div>
         
         <ConfigItem 
           label="检测结果接收地址" 
@@ -1601,7 +1740,12 @@
       </div>
       
       <div class="config-group">
-        <h3 class="group-title">目标参数</h3>
+        <div class="group-header">
+            <h3 class="group-title">目标参数</h3>
+            <button @click="saveAll" class="group-save-btn">
+              <i class="fas fa-save"></i> 保存本组
+            </button>
+          </div>
         
         <ConfigItem 
           label="计算间隔(ms)" 
@@ -1638,7 +1782,12 @@
       </div>
       
       <div class="config-group">
-        <h3 class="group-title">相机参数</h3>
+        <div class="group-header">
+            <h3 class="group-title">相机参数</h3>
+            <button @click="saveAll" class="group-save-btn">
+              <i class="fas fa-save"></i> 保存本组
+            </button>
+          </div>
         
         <ConfigItem 
           label="焦距 X (fx)" 
@@ -1714,7 +1863,12 @@
       </div>
       
       <div class="config-group">
-        <h3 class="group-title">标准差设置</h3>
+        <div class="group-header">
+            <h3 class="group-title">标准差设置</h3>
+            <button @click="saveAll" class="group-save-btn">
+              <i class="fas fa-save"></i> 保存本组
+            </button>
+          </div>
         
         <ConfigItem 
           label="相机经度标准差" 
@@ -1785,7 +1939,12 @@
       </div>
       
       <div class="config-group">
-        <h3 class="group-title">目标定位设置</h3>
+        <div class="group-header">
+            <h3 class="group-title">目标定位设置</h3>
+            <button @click="saveAll" class="group-save-btn">
+              <i class="fas fa-save"></i> 保存本组
+            </button>
+          </div>
         
         <ConfigItem 
           label="投影模式" 
@@ -1903,5 +2062,393 @@ onMounted(() => {
 </script>
 
 <style scoped>
-/* 样式保持不变 */
+.config-view {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* 页面标题 */
+.page-title {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+
+.page-title i {
+  margin-right: 15px;
+  color: #3498db;
+}
+
+/* 配置头部区域 */
+.config-header {
+  background: white;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+}
+
+.config-selector {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.selector-group {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+.selector-group label {
+  margin-right: 10px;
+  font-weight: 500;
+  color: #555;
+}
+
+.selector-group select {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  min-width: 200px;
+  background: #f9f9f9;
+  font-size: 1rem;
+  transition: border 0.3s;
+}
+
+.selector-group select:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.config-controls {
+  display: flex;
+  gap: 10px;
+  margin-left: auto;
+  flex-wrap: wrap;
+}
+
+/* 按钮通用样式 */
+.btn {
+  display: flex;
+  align-items: center;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background-color: #3498db;
+  color: white;
+}
+
+.btn-primary:not(:disabled):hover {
+  background-color: #2980b9;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+}
+
+.btn-success {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.btn-success:not(:disabled):hover {
+  background-color: #27ae60;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+}
+
+/* 消息样式 */
+.error-message {
+  background-color: #ffebee;
+  color: #c63737;
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  border-left: 4px solid #f44336;
+}
+
+.error-message i {
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+.success-message {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  border-left: 4px solid #4CAF50;
+}
+
+.success-message i {
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+/* 无配置提示 */
+.no-config {
+  background: #e3f2fd;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  color: #1976d2;
+  font-size: 1.1rem;
+  margin-top: 10px;
+  border: 1px dashed #90caf9;
+}
+
+.no-config i {
+  margin-right: 10px;
+  font-size: 1.4rem;
+}
+
+/* 配置区域 */
+.config-sections {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f0f0f0;
+}
+
+.config-section {
+  margin-bottom: 30px;
+}
+
+.config-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #eee;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  color: #1a237e;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* 部分保存按钮 */
+.section-save-btn {
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 15px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(33, 150, 243, 0.2);
+}
+
+.section-save-btn:hover {
+  background-color: #1976d2;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(33, 150, 243, 0.3);
+}
+
+.section-save-btn i {
+  margin-right: 5px;
+}
+
+/* 配置组样式 */
+.config-group {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 25px;
+  border: 1px solid #eee;
+  transition: all 0.3s ease;
+}
+
+.config-group:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  border-color: #e0e0e0;
+}
+
+.group-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.group-title {
+  font-size: 1.2rem;
+  color: #1976d2;
+  margin: 0;
+  font-weight: 600;
+}
+
+/* 组保存按钮 */
+.group-save-btn {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(76, 175, 80, 0.2);
+}
+
+.group-save-btn:hover {
+  background-color: #388e3c;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(76, 175, 80, 0.3);
+}
+
+.group-save-btn i {
+  margin-right: 5px;
+}
+
+/* 外场警告 */
+.field-warning {
+  background: #fff8e1;
+  padding: 10px 15px;
+  border-radius: 4px;
+  border-left: 3px solid #ffc107;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  font-size: 0.95rem;
+}
+
+.field-warning i {
+  margin-right: 10px;
+  color: #ff8f00;
+  font-size: 1.1rem;
+}
+
+/* 加载状态 */
+.loading-container {
+  text-align: center;
+  padding: 40px;
+  color: #616161;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-container i {
+  margin-right: 10px;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+/* 配置项布局 */
+.config-items-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* 响应式布局 */
+@media (max-width: 768px) {
+  .config-selector {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .config-controls {
+    margin-left: 0;
+    margin-top: 10px;
+    width: 100%;
+    justify-content: flex-start;
+  }
+  
+  .config-section-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .section-save-btn {
+    margin-top: 10px;
+    align-self: flex-end;
+  }
+  
+  .group-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .group-save-btn {
+    margin-top: 10px;
+    align-self: flex-end;
+  }
+  
+  .config-items-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-title {
+    font-size: 1.5rem;
+  }
+  
+  .selector-group {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  
+  .selector-group select {
+    width: 100%;
+    margin-top: 5px;
+  }
+  
+  .btn {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 5px;
+  }
+  
+  .section-title {
+    font-size: 1.3rem;
+  }
+  
+  .group-title {
+    font-size: 1.1rem;
+  }
+}
 </style>
