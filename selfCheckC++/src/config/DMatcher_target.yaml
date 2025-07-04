@@ -4,7 +4,7 @@
 
 DMatcher:
   # 实飞
-  sat_map: "../../map/XA_L19_CUT/"
+  sat_map: ../../map/XA_L19_CUT/
   # evelation_map: "../../map/elevation/"
   # dfeature_database_path: "../../map/localDFeature/"
   dfeature_type: 1

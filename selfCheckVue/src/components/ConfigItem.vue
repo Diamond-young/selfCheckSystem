@@ -101,48 +101,50 @@ const onSave = () => {
 <style scoped>
 .config-item {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   margin-bottom: 15px;
   padding: 10px;
-  border-radius: 8px;
-  background-color: #f9f9f9;
-  border: 1px solid #eee;
-  transition: background-color 0.3s;
+  border-radius: 6px;
+  background: #f8f9fa;
+  transition: background 0.2s;
 }
 
 .config-item:hover {
-  background-color: #f0f0f0;
+  background: #e9ecef;
 }
 
 .item-label {
-  font-weight: bold;
-  min-width: 200px;
-  color: #333;
+  flex: 0 0 200px;
+  font-weight: 500;
+  color: #495057;
+  padding: 8px 0;
 }
 
 .item-control {
   flex: 1;
-  margin: 0 10px;
+  min-width: 300px;
 }
 
 .input-control, .select-control {
   width: 100%;
-  padding: 8px 10px;
-  border: 1px solid #ddd;
+  padding: 8px 12px;
+  border: 1px solid #ced4da;
   border-radius: 4px;
   font-size: 1rem;
 }
 
 .select-control {
+  background: white;
   cursor: pointer;
-  background-color: white;
 }
 
 .item-path {
-  font-size: 0.8rem;
-  color: #666;
-  min-width: 150px;
-  margin-left: 10px;
+  flex: 0 0 100%;
+  font-size: 0.85rem;
+  color: #6c757d;
+  margin-top: 5px;
+  padding-top: 5px;
+  border-top: 1px dashed #dee2e6;
 }
 
 /* 保存按钮样式 */

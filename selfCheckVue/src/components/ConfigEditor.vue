@@ -3,7 +3,7 @@
     <h1 class="page-title">
       <i class="fas fa-cogs"></i> 系统配置管理
     </h1>
-    
+     
     <div class="config-header">
       <div class="config-selector">
         <div class="selector-group">
